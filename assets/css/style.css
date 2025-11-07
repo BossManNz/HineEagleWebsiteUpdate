@@ -2040,3 +2040,20 @@ html, body {
   max-width: 720px;
   height: auto;
 }
+
+/* Make mobile menu underlines a consistent length */
+@media (max-width: 1200px) {
+  .nav ul { align-items: flex-start; }
+
+  .nav ul li {
+    display: block !important;         /* stop flex shrinking */
+  }
+
+  .nav ul li a {
+    display: block !important;         /* block = width respects our value */
+    width: 180px;                      /* set your underline length */
+    margin: 0;                         /* or margin: 0 auto; to center */
+    padding: 14px 0;                   /* keep your tap target */
+    border-bottom: 1px solid rgba(255,255,255,0.2); /* keep the line */
+  }
+}
